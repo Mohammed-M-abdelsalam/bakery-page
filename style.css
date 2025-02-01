@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html{
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+
+.clear{
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Alegreya", sans-serif;
+    font-weight: 400;
+}
+p{
+    font-size: 0.8rem;
+    color: #686868;
+}
+
+/* header */
+header{
+    width: 100vw;
+    background-image: url('https://www.engage.veented.com/bakery/wp-content/uploads/sites/27/2017/04/drew-coffman-1872.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;   
+}
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* nav */
+nav{
+    position: relative;
+    padding: 0.5em 0;
+    background-color: transparent;
+    color: #fff;
+    z-index: 1;
+}
+nav .logo{
+    float: left;
+    padding: 0.3em 0.5em;
+    font-size: 1.5rem;
+}
+nav ul{
+    float: right;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.menu-icon{
+    display: none !important;
+    float: right;
+    padding: 0.4em 2em;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    .nav-menu{
+        display: none;
+    }
+    .menu-icon{
+        display: block !important;
+    }
+}
+
+/* main */
+main{
+    place-content: center;
+    height: clamp(30rem, 50vw, 40rem);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 2em;
+    position: relative;
+}
+main .content{
+    margin: 0 auto;
+    width: clamp(20rem, 50vw, 40rem);
+}
+main .Welcome-text{
+    font-size: 1rem;
+}
+main h1{
+    font-family: "Alegreya", sans-serif;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: lighter;
+    margin: 0.5em 0;
+}
+main .content p{
+    color: #fff;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    font-weight: 400;
+}
+main .learn-btn, main .contact-btn{
+    height: 3.5em;
+    padding: 0.4em 1.6em;
+    margin: 1em 0.5em;
+    border: none;
+    border-radius: 10em / 0.5em;
+    cursor: pointer;
+}
+main .learn-btn{
+    background-color: #8e7754;
+    color: #fff;
+}
+main .contact-btn{
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+
+/* section design */
+.section-design{
+    padding: 5em;
+    text-align: center;
+}
+@media screen and (max-width: 1000px) {
+    .section-design{
+        padding: 1em 5em;
+    }
+    
+}
+
+/* about us section */
+.about-us .img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+}
+.about-us .content{
+    text-align: start;
+    display: inline-block;
+    width: 45%;
+    vertical-align: middle;
+    margin: 5em 0;
+    margin-left: 2em;
+    line-height: 1.5em;
+}
+.about-us .content i{
+    color: #8e7754;
+    margin-right: 0.5em;
+}
+.about-us .content p{
+    display: inline-block;
+    margin: 0.5em 0;
+}
+.about-us .content ul{
+    list-style: none;
+    margin: 2em 0;
+}
+@media screen and (max-width: 1000px) {
+    .about-us .img, .about-us .content{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* our location */
+.our-location{
+    background-color: #f8f8f8;
+}
+.our-location .img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+}
+.our-location .content{
+    text-align: start;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    margin: 5em 0;
+    margin-left: 2em;
+    line-height: 1.5em;
+}
+.our-location .content h2{
+    font-family: "Alegreya", sans-serif;
+}
+.our-location .content>p{
+    margin: 2em 0;
+}
+.our-location .content ul{
+    margin: 2em 0;
+}
+@media screen and (max-width: 1000px) {
+    .our-location .img, .our-location .content{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/*  our baking */
+.our-baking .cards{
+    margin: 1em auto;
+}
+.our-baking .cards .card{
+    float: left;
+    width: calc(100% / 3 - 2em);
+    margin: 1em;
+    line-height: 1.5em;
+}
+.our-baking .cards .card h3{
+    font-family: "Alegreya", sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+    .our-baking .cards .card{
+        width: calc(100% - 2em);
+    }
+}
+
+
+/* contact us section */
+.contact-us {
+    background-color: #f8f8f8;
+}
+.contact-us  iframe{
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+}
+.contact-us  .content{
+    text-align: start;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    margin: 5em 0;
+    margin-left: 2em;
+    line-height: 1.5em;
+    font-size: 0.8rem;
+    color: #686868;
+}
+.contact-us  .content h2{
+    font-family: "Alegreya", sans-serif;
+    color: #000;
+    font-size: 1.5rem;
+}
+.contact-us  .content>p{
+    margin: 2em 0;
+}
+.contact-us  .content ul{
+    margin: 2em 0;
+}
+@media screen and (max-width: 1000px) {
+    .contact-us iframe, .contact-us  .content{
+        width: 80%;
+        margin-bottom: 2em;
+        margin-left: 0;
+    }
+
+}
+
+/* footer */
+footer{
+    background-color: #403d38;
+    color: #A9A9A9;
+    font-size: 0.8rem;
+}
+footer h3{
+    color: #fff;
+    font-size: 1rem;
+}
+
+footer .top-footer .footer-block{
+    float: left;
+    width: calc(80% / 4);
+    margin: 2em;
+}
+footer .top-footer .about-us p{
+    line-height: 1.8em;
+    margin: 1.5em 0;
+}
+
+footer .footer-block ul{
+    list-style: none;
+}
+footer .footer-block ul li{
+    border-bottom: 1px solid #ffffff0d;
+    padding: 1em 0;
+    cursor: pointer;
+}
+footer .social{
+    position: relative;
+}   
+footer .social::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('contact-details-map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+}
+
+footer .bottom-footer{
+    text-align: center;
+    padding: 2em;
+}
+footer .bottom-footer .logo{
+    font-family: 'Alegreya', sans-serif;
+    font-size: 5rem;
+    color: #fff;
+}
+footer .bottom-footer .icons{
+    margin: 2em 0;
+}
+footer .bottom-footer .icons i{
+    font-size: 1.5rem;
+    background-color: #484540;
+    color: #8c8a86;
+    border-radius: 1em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+    footer .top-footer .footer-block{
+        width: 80%;
+        margin: 2em 7em;
+    }
+}
